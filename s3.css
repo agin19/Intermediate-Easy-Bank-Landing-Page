@@ -45,20 +45,20 @@ nav a:hover{
     background-color:rgba(12, 191, 12, 0.831);
 }
 
- button{
-    margin-left: 1310px;
-    
-    display: inline-block;
-    margin-top: -10;
+ .btn{
+     margin-left: 1300px;
+     margin-top: -30px;
+     margin-bottom: 30px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
     color: white;
-    background-color: rgba(12, 226, 90, 0.885);
-    padding: 10px 25px;
-    border: 1px solid teal;
-    border-radius: 25px;
-}
+    background: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+    cursor: pointer;
+ }
 
 
-button:hover{
+.btn:hover{
     color: black;
     background-color:lightblue;
 
@@ -99,7 +99,7 @@ header .h-lg{
     display: inline-block;
     margin-top: -10;
     color: white;
-    background-color: rgba(12, 226, 90, 0.885);
+    background: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
     padding: 10px 25px;
     border: 1px solid teal;
     border-radius: 25px;
@@ -237,85 +237,95 @@ header .h-lg{
 
 }
 
-.ovly{
-    position: relative;
-    background-color: rgba(5, 3, 107, 0.611);
-    height: 200px;
-}
-
-.cnt{
-    position: absolute;
-    top:180%;
-    left: 15%;
+footer {
+    padding: 100px;
+    background-color: hsl(233, 26%, 24%);
     color: white;
-}
-
-.mg{
-    margin-top: -2px;
-
-}
-
-.mg img{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 1fr 2fr;
+    gap: 50px;
+  }
+  
+  footer > div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  footer > div:first-child svg {
     margin-right: 10px;
-}
-
-.mg img:hover{
-    background-color: teal;
-}
-
-.img2{
-    margin-left: 490px;
-    margin-top: -117px;
-
-}
-
-.img2 a{
-    text-decoration: none;
-    display: block;
+  }
+  
+  footer > div:nth-child(2) > div,
+  footer > div:nth-child(3) > div {
+    font-weight: 300;
     margin-bottom: 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  footer > div:nth-child(2) > div:hover,
+  footer > div:nth-child(3) > div:hover {
+    color: hsl(136, 65%, 51%);
+  }
+  
+  footer > div:nth-child(2) > div:last-child,
+  footer > div:nth-child(3) > div:last-child {
+    margin-bottom: 0px;
+  }
+  
+  footer > div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    white-space: nowrap;
+  }
+  
+  footer > div:last-child > div {
+    font-size: 16px;
+    color: hsl(233, 8%, 62%);
+  }
+  
+  footer button {
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
     color: white;
-}
-
-.img1{
-   margin-left: 300px;
-   margin-top: -50px;
-    
-}
-
-.img1 a{
-    text-decoration: none;
-    display: block;
-    margin-bottom: 20px;
-    color: white;
-}
-
-.img1 a:hover{
-    color: rgba(22, 213, 22, 0.385);
-    transition: 0.5s;
-}
-
-
-.cnt p{
-    margin-left: 900px;
-    margin-top: -50px;
-
-}
-
-.lg{
-    margin-top: -50px;
-}
-
-.lg img{
-    /* padding: 10px; */
-    margin-top: -20px;
-}
- .cnt .bn{
-    
- 
+    background: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+    cursor: pointer;
+  }
+  
+  footer button:hover {
+    opacity: 0.7;
+  }
+  
+  .social-icons > svg {
+    cursor: pointer;
+  }
+  
+  .social-icons > svg:hover path {
+    fill: hsl(136, 65%, 51%);
+  }
+  
+  @media screen and (max-width: 1024px) {
+    footer {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      text-align: center;
+      padding: 30px;
     }
-
-    .bn:hover{
-        color: black;
-        background-color: teal;
+    footer > div:first-child svg {
+      margin: 10px auto;
     }
-
+    footer > div:last-child {
+      align-items: center;
+    }
+    footer > div:last-child button {
+      margin-bottom: 20px;
+    }
+    footer > div:first-child .social-icons > svg {
+      margin: 10px 5px;
+    }
+  }
+  
