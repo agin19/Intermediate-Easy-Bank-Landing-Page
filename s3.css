@@ -240,12 +240,12 @@ header .h-lg{
 .ovly{
     position: relative;
     background-color: rgba(5, 3, 107, 0.611);
-    height: 240px;
+    height: 200px;
 }
 
 .cnt{
     position: absolute;
-    top:195%;
+    top:180%;
     left: 15%;
     color: white;
 }
